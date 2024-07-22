@@ -1,0 +1,8 @@
+*.pyc
+
+.vs/
+
+__pycache__/
+
+.gif
+.png
