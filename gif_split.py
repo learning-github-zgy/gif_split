@@ -12,6 +12,9 @@ def extract_frames_at_intervals(gif_path, num_frames):
     total_frames = gif.n_frames
     interval = total_frames // num_frames
     frame_indices = [i * interval for i in range(num_frames)]
+    
+    # 添加最后一帧到图像上
+    frame_indices.append(total_frames - 1) 
     frames = [frame.copy() for i, frame in enumerate(ImageSequence.Iterator(gif)) if i in frame_indices]
     return frames
 
