@@ -50,7 +50,7 @@ def main():
     num_frames = 10                     # 要提取的帧数
     interval = 10                      # 帧之间的间隔（像素）
     
-    frames = extract_frames_at_intervals(gif_path, num_frames)
+    frames = extract_frames_at_intervals(gif_path, num_frames-1)
     concatenated_image = concatenate_frames(frames, interval)
     concatenated_image.save(output_path)
     print("Done")
